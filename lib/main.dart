@@ -19,17 +19,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent
-      )
-    );
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return BlocProvider(
       create: (context) => SplashCubit()..appStarted(),
       child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme.appTheme,
-        home: const SplashPage()
-      ),
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.appTheme,
+          home: const SplashPage()),
     );
   }
 }
